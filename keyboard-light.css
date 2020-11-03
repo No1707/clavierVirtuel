@@ -1,0 +1,15 @@
+
+.keyboard{
+    background-color: rgba(204, 204, 204, 0.466);
+}
+
+.key, .bigKey, .space{
+    background-color: white;
+    color: black;
+}
+
+.toggleButton{
+    background-color: rgb(39, 38, 38);
+    color: white;
+    font-size: 100%;
+}

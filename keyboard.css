@@ -1,0 +1,70 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trispace', sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+textarea{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    font-size: 150%;
+    text-align: start;
+    padding: 10px;
+}
+
+.keyboard{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+p{
+    font-size: 150%;
+}
+.key p{
+    text-transform: uppercase;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    height: 18%;
+    margin: 5px 0;
+    position: relative;
+}
+.key{
+    width: 5.5em;
+}
+.bigKey{
+    width: 10em;
+}
+.space{
+    width: 30em;
+}
+.key, .bigKey, .space{
+    margin: 0 5px;
+    padding: 10px;
+    border: solid 5px #000;
+    border-width: 0 4px 5px 0;
+    border-radius: 10px;
+    border-color: transparent #ddd #999 transparent;
+}   
+.toggleButton{
+    margin-right: auto;
+}
+.fakeButton{
+    width: 10em;
+    margin: 0 5px;
+    margin-left: auto;
+}

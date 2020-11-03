@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(34, 33, 33);
+}
+
+textarea{
+    background-color: rgb(39, 38, 38);
+    color: white;
+}
+
+.keyboard{
+    background-color: rgb(51, 50, 50);
+}
+
+.key, .bigKey, .space{
+    background-color: rgb(39, 38, 38);
+    border-color: transparent #ddd #999 transparent;
+    color: white;
+}
+
+.toggleButton{
+    background-color: white;
+    color: black;
+}
