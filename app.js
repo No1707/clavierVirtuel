@@ -14,7 +14,7 @@ const toggleButton = document.querySelector(".toggleButton")
 
 toggleButton.addEventListener("click", () => {
    
-    const styleSheet = document.getElementsByTagName("link")[4]
+    const styleSheet = document.getElementsByTagName("link")[6]
     if( styleSheet.getAttribute("href") === "keyboard-light.css"){
 
         styleSheet.setAttribute("href", "keyboard-night.css")

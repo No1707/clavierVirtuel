@@ -19,6 +19,10 @@ header{
     color: white;
 }
 
+.textarea{
+    background-color: #14ffec;
+}
+
 .key, .bigKey, .space{
     background-color: #212121;
     border-color: transparent #ddd #999 transparent;

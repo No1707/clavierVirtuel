@@ -15,6 +15,10 @@ header{
     border: 2px solid#ff2e63;
 }
 
+.textarea{
+    background-color: #ff2e63;
+}
+
 .key, .bigKey, .space{
     background-color: white;
     color: black;

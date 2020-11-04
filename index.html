@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="keyboard.css">
@@ -11,6 +14,7 @@
 </head>
 <body>
 
+    <!-- header -->
     <header>
         <div>
             <div class="date">
@@ -23,6 +27,7 @@
         </div>
     </header>
 
+    <!-- chat -->
     <section class="chat">
         <div class="message">
             <p>blablabla</p>
@@ -31,72 +36,93 @@
             <p>blablabla</p>
         </div>
     </section>
-    
-    <div class="keyboard">
+
+    <!-- keyboard -->
+    <section>
+
+        <div class="textarea">
+            <textarea></textarea>
+            <button>Send</button>
+        </div>
+
+        <div class="keyboard">
 
             <!-- first row -->
-        <div class="row first">
-            <div class="key"><p>1</p></div>
-            <div class="key"><p>2</p></div>
-            <div class="key"><p>3</p></div>
-            <div class="key"><p>4</p></div>
-            <div class="key"><p>5</p></div>
-            <div class="key"><p>6</p></div>
-            <div class="key"><p>7</p></div>
-            <div class="key"><p>8</p></div>
-            <div class="key"><p>9</p></div>
-            <div class="key"><p>0</p></div>
-            <div class="bigKey"><p>Suppr</p></div>
+            <div class="row first">
+                <div class="key"><p>1</p></div>
+                <div class="key"><p>2</p></div>
+                <div class="key"><p>3</p></div>
+                <div class="key"><p>4</p></div>
+                <div class="key"><p>5</p></div>
+                <div class="key"><p>6</p></div>
+                <div class="key"><p>7</p></div>
+                <div class="key"><p>8</p></div>
+                <div class="key"><p>9</p></div>
+                <div class="key"><p>0</p></div>
+                <div class="key">)</div>
+                <div class="key">=</div>
+                <div class="bigKey"><p>Suppr</p></div>
+            </div>
+
+            <div class="row second">
+                <div data-mode="light" class="bigKey toggleButton"><p>Night</p></div>
+                <div class="key"><p>a</p></div>
+                <div class="key"><p>z</p></div>
+                <div class="key"><p>e</p></div>
+                <div class="key"><p>r</p></div>
+                <div class="key"><p>t</p></div>
+                <div class="key"><p>y</p></div>
+                <div class="key"><p>u</p></div>
+                <div class="key"><p>i</p></div>
+                <div class="key"><p>o</p></div>
+                <div class="key"><p>p</p></div>
+                <div class="key"><p>^</p></div>
+                <div class="key"><p>$</p></div>
+                <div class="fakeButton"></div>
+            </div>
+
+            <div class="row third">
+                <div class="bigKey"><p>Caps</p></div>
+                <div class="key"><p>q</p></div>
+                <div class="key"><p>s</p></div>
+                <div class="key"><p>d</p></div>
+                <div class="key"><p>f</p></div>
+                <div class="key"><p>g</p></div>
+                <div class="key"><p>h</p></div>
+                <div class="key"><p>j</p></div>
+                <div class="key"><p>k</p></div>
+                <div class="key"><p>l</p></div>
+                <div class="key"><p>m</p></div>
+                <div class="key"><p>ù</p></div>
+                <div class="key"><p>*</p></div>
+                <div class="bigKey"><p>Enter</p></div>
+            </div>
+
+            <div class="row fourth">
+                <div class="bigKey"><p>Shift</p></div>
+                <div class="key"><p>w</p></div>
+                <div class="key"><p>x</p></div>
+                <div class="key"><p>c</p></div>
+                <div class="key"><p>v</p></div>
+                <div class="key"><p>b</p></div>
+                <div class="key"><p>n</p></div>
+                <div class="key"><p>,</p></div>
+                <div class="key"><p>;</p></div>
+                <div class="key"><p>:</p></div>
+                <div class="key"><p>!</p></div>
+                <div class="bigKey" id="emojis">
+                    <p>&#128540;</p>
+                </div>
+            </div>
+
+            <div class="row fifth">
+                <div class="space"><p>Space</p></div>
+            </div>
+
         </div>
 
-        <div class="row second">
-            <div data-mode="light" class="bigKey toggleButton"><p>Night</p></div>
-            <div class="key"><p>q</p></div>
-            <div class="key"><p>w</p></div>
-            <div class="key"><p>e</p></div>
-            <div class="key"><p>r</p></div>
-            <div class="key"><p>t</p></div>
-            <div class="key"><p>y</p></div>
-            <div class="key"><p>u</p></div>
-            <div class="key"><p>i</p></div>
-            <div class="key"><p>o</p></div>
-            <div class="key"><p>p</p></div>
-            <div class="fakeButton"></div>
-        </div>
-
-        <div class="row third">
-            <div class="bigKey"><p>Caps</p></div>
-            <div class="key"><p>a</p></div>
-            <div class="key"><p>s</p></div>
-            <div class="key"><p>d</p></div>
-            <div class="key"><p>f</p></div>
-            <div class="key"><p>g</p></div>
-            <div class="key"><p>h</p></div>
-            <div class="key"><p>j</p></div>
-            <div class="key"><p>k</p></div>
-            <div class="key"><p>l</p></div>
-            <div class="bigKey"><p>Enter</p></div>
-        </div>
-
-        <div class="row fourth">
-            <div class="bigKey"><p>Shift</p></div>
-            <div class="key"><p>z</p></div>
-            <div class="key"><p>x</p></div>
-            <div class="key"><p>c</p></div>
-            <div class="key"><p>v</p></div>
-            <div class="key"><p>b</p></div>
-            <div class="key"><p>n</p></div>
-            <div class="key"><p>m</p></div>
-            <div class="key"><p>,</p></div>
-            <div class="key"><p>;</p></div>
-            <div class="key"><p>:</p></div>
-        </div>
-
-        <div class="row fifth">
-            <div class="space"><p>Space</p></div>
-        </div>
-
-    </div>
+    </section>
+    
 
     <script src="app.js"></script>
 </body>
