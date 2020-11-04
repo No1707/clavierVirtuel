@@ -1,18 +1,26 @@
 body{
-    background-color: rgb(34, 33, 33);
+    background-color:  #212121;
 }
 
-textarea{
-    background-color: rgb(39, 38, 38);
+header{
+    color: #14ffec;
+}
+
+.reset button{
+    background-color: #14ffec;
+}
+
+.keyboard, header{
+    background-color: #323232;
+}
+
+.chat div{
+    border: 2px solid #08d9d6;
     color: white;
 }
 
-.keyboard{
-    background-color: rgb(51, 50, 50);
-}
-
 .key, .bigKey, .space{
-    background-color: rgb(39, 38, 38);
+    background-color: #212121;
     border-color: transparent #ddd #999 transparent;
     color: white;
 }
@@ -21,3 +29,4 @@ textarea{
     background-color: white;
     color: black;
 }
+

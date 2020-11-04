@@ -2,7 +2,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Trispace', sans-serif;
+}
+
+button:focus{
+    outline: none;
+}
+
+body, .keyboard, .key, .bigKey, .space, .toggleButton{
+    transition: .5s ease;
 }
 
 body{
@@ -11,24 +18,57 @@ body{
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-textarea{
-    width: 80%;
-    height: 20%;
-    margin: auto;
-    font-size: 150%;
-    text-align: start;
-    padding: 10px;
+header{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+}
+
+header > div{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+
+.reset{
+    width: 10%;
+}
+
+.reset button{
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.chat{
+    overflow: auto;
+    flex: 2;
+    display: flex;  /* a modif si réponses doivent apparaitre a gauche */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-family: 'Roboto', sans-serif;
+}
+
+.chat div{
+    border-radius: 10px;
+    margin: 0 10px 7px 0;
+    padding: 5px;
+    font-size: .7em;
 }
 
 .keyboard{
-    height: 50%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    font-family: 'Trispace', sans-serif;
 }
 p{
     font-size: 150%;
@@ -44,17 +84,17 @@ p{
     position: relative;
 }
 .key{
-    width: 5.5em;
+    width: 4em;
 }
 .bigKey{
-    width: 10em;
+    width: 8em;
 }
 .space{
-    width: 30em;
+    width: 25em;
 }
 .key, .bigKey, .space{
     margin: 0 5px;
-    padding: 10px;
+    padding: 5px;
     border: solid 5px #000;
     border-width: 0 4px 5px 0;
     border-radius: 10px;

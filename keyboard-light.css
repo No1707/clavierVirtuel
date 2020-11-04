@@ -1,6 +1,18 @@
 
-.keyboard{
-    background-color: rgba(204, 204, 204, 0.466);
+.keyboard, header{
+    background-color:#e9dfdf;
+}
+
+header{
+    color: #ff2e63;
+}
+
+.reset button{
+    background-color: #ff2e63;
+}
+
+.chat div{
+    border: 2px solid#ff2e63;
 }
 
 .key, .bigKey, .space{
