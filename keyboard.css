@@ -7,12 +7,16 @@
 .key, .bigKey, .space, .textarea button, .reset button{
     cursor: pointer;
 }
+.key:active, .bigKey:active, .space:active{
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
 
 button:focus, textarea:focus{
     outline: none;
 }
 
-body, .keyboard, .key, .bigKey, .space, .toggleButton{
+body, .keyboard{
     transition: .5s ease;
 }
 
@@ -83,6 +87,8 @@ textarea{
     resize: none;
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
+    font-size: 200%;
+    height: auto;
 }
 .textarea button{
     width: 10%;
@@ -105,6 +111,7 @@ p{
 }
 .key p{
     text-transform: uppercase;
+    pointer-events: none;
 }
 .row{
     display: flex;
@@ -125,10 +132,8 @@ p{
 .key, .bigKey, .space{
     margin: 0 5px;
     padding: 5px;
-    border: solid 5px #000;
-    border-width: 0 4px 5px 0;
     border-radius: 10px;
-    border-color: transparent #ddd #999 transparent;
+    box-shadow: 0 5px #999;
 }/* night/light */  
 .toggleButton{
     margin-right: auto;

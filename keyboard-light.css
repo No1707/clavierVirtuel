@@ -23,9 +23,15 @@ header{
     background-color: white;
     color: black;
 }
+.key:hover, .bigKey:hover, .space:hover{
+    background-color: rgb(221, 221, 221);
+}
 
 .toggleButton{
     background-color: rgb(39, 38, 38);
     color: white;
     font-size: 100%;
+}
+.toggleButton:hover{
+    background-color: rgb(39, 38, 38);
 }

@@ -28,9 +28,14 @@ header{
     border-color: transparent #ddd #999 transparent;
     color: white;
 }
+.key:hover, .bigKey:hover, .space:hover{
+    background-color: black;
+}
 
 .toggleButton{
     background-color: white;
     color: black;
 }
-
+.toggleButton:hover{
+    background-color: white;
+}

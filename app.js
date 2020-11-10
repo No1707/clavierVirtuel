@@ -29,12 +29,15 @@ toggleButton.addEventListener("click", () => {
 
 })
 
-
+//textarea
+const textarea = document.querySelector("textarea")
 //keys
 const keys = document.querySelectorAll(".key")
 
 for( i = 0; i<keys.length; i++){
     keys[i].addEventListener("click", (e) => {
-        console.log(e.target)
+        const key = e.target
+        const keyItem = key.className[4]
+        textarea.innerHTML += keyItem
     })
 }
