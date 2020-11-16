@@ -3,11 +3,9 @@
     margin: 0;
     padding: 0;
 }
-
 .key, .bigKey, .space, .textarea button, .reset button{
     cursor: pointer;
 }
-
 button:focus, span:focus{
     outline: none;
 }
@@ -29,18 +27,20 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: 'Roboto', sans-serif;
 }
-
-header > div{
-    display: flex;
-    width: 30%;
-    justify-content: space-around;
+/* date */
+.date{
+    margin-left: 2%;
 }
+/*son*/
+
 
 /* reset*/
 .reset{
     width: 10%;
+    height: 100%;
 }
 
 .reset button{
@@ -81,15 +81,14 @@ header > div{
 
 /* downP */
 .downP{
-    height: 40%;
+    height: 30%;
     display: flex;
     flex-direction: column;
 }
 
 /* keyboard */
 .keyboard{
-    height: 85%;
-    flex: 2;
+    height: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Trispace', sans-serif;
@@ -98,7 +97,7 @@ header > div{
     display: flex;
     justify-content: center;
     height: 18%;
-    margin: 5px 0;
+    margin: 3px 0;
     position: relative;
 }
 p{
@@ -108,13 +107,13 @@ p{
     width: 4em;
 }
 .bigKey{
-    width: 8em;
+    width: 7em;
 }
 .space{
-    width: 25em;
+    width: 30em;
 }
 .key, .bigKey, .space{
-    margin: 0 5px;
+    margin: 0 3px;
     padding: 5px;
     border-radius: 10px;
 }
@@ -126,14 +125,19 @@ p{
 }
 .led{
     position: absolute;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     top: 10px;
     right: 10px;
     border-radius: 25px;
 }
 
-/* night/light & send */  
+/* night/light & send */
+.toggleButton, .send{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .toggleButton{
     margin-right: auto;
 }

@@ -1,7 +1,7 @@
 body, .key, .bigKey, .space{
     background-color:  #212121;
 }
-header{
+header, a{
     color: #14ffec;
 }
 .keyboard, header{
@@ -12,7 +12,6 @@ header{
     color: white;
 }
 .key, .bigKey, .space{
-    border-color: transparent #ddd #999 transparent;
     color: white;
 }
 .key:hover, .bigKey:hover, .space:hover{

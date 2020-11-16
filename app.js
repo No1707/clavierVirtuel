@@ -3,30 +3,11 @@
 const options = { day: 'numeric', month: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }
 const timeDisplay = document.querySelector("#time")
 
-setInterval( () => {
+setInterval(() => {
     window.time = new Date()
 
     timeDisplay.innerHTML = time.toLocaleDateString("fr-FR", options)
 }, 1000)
-
-//night/light mode
-const toggleButton = document.querySelector(".toggleButton")
-
-toggleButton.addEventListener("click", () => {
-   
-    const styleSheet = document.getElementsByTagName("link")[3]
-    if( styleSheet.getAttribute("href") === "keyboard-light.css"){
-
-        styleSheet.setAttribute("href", "keyboard-night.css")
-        toggleButton.innerHTML = "<p>Light</p>"
-
-    } else {
-
-        styleSheet.setAttribute("href", "keyboard-light.css")
-        toggleButton.innerHTML = "<p>Night</p>"
-
-    }
-})
 
 //myMess & Txt
 const myTxt = document.querySelector("#myTxt")
@@ -34,12 +15,12 @@ const myDiv = document.querySelector("#myMess")
 
 //Observer
 observer = new MutationObserver(function (mutationsList, observer) {
-    if (myTxt.innerHTML.length < 1){
+    if (myTxt.innerHTML.length < 1) {
         myDiv.style.display = "none"
     } else {
         myDiv.style.display = "block"
     }
-    if(shiftAct === true){
+    if (shiftAct === true) {
         divP.forEach(el => {
             el.style.textTransform = "lowercase"
         })
@@ -54,13 +35,13 @@ observer.observe(myTxt, { characterData: false, childList: true, attributes: fal
 
 //keys
 const keys = document.querySelectorAll(".key")
-for( i = 0; i<keys.length; i++){
+for (i = 0; i < keys.length; i++) {
     keys[i].addEventListener("click", (e) => {
-        const audio = new Audio("./assets/typeSound1.mp3")
-        audio.play()
+        window.audio1 = new Audio("./assets/typeSound1.mp3")
+        audio1.play()
         const key = e.target
         //caps lock / shift ?
-        if(capsAct || shiftAct){
+        if (capsAct || shiftAct) {
             const keyItem = key.classList[2]
             myTxt.innerHTML += keyItem
         } else {
@@ -78,6 +59,7 @@ let shiftAct = false
 const divP = document.querySelectorAll(".key p")
 const specP = document.querySelectorAll(".spec p")
 const chat = document.querySelector(".chat")
+const styleSheet = document.querySelector("#toggleMode")
 
 const bigKeys = document.querySelectorAll(".bigKey")
 for (i = 0; i < bigKeys.length; i++) {
@@ -86,9 +68,9 @@ for (i = 0; i < bigKeys.length; i++) {
     })
 }
 
-function bigKeysClick(e){
-    const audio = new Audio("./assets/typeSound2.mp3")
-    audio.play()
+function bigKeysClick(e) {
+    window.audio2 = new Audio("./assets/typeSound2.mp3")
+    audio2.play()
     const key = e.target
     const keyItem = key.classList[1]
 
@@ -97,8 +79,8 @@ function bigKeysClick(e){
         //suppr
         case "del":
             const length = myTxt.innerHTML.length
-            const lastChar = myTxt.innerHTML.slice(length-4, length)
-            if(lastChar === "<br>"){
+            const lastChar = myTxt.innerHTML.slice(length - 4, length)
+            if (lastChar === "<br>") {
                 const newText = myTxt.innerHTML.slice(0, -4)
                 myTxt.innerHTML = newText
             } else {
@@ -138,7 +120,7 @@ function bigKeysClick(e){
 
         //caps
         case "caps":
-            if(capsAct === false){
+            if (capsAct === false) {
                 divP.forEach(el => {
                     el.style.textTransform = "capitalize"
                 })
@@ -165,9 +147,22 @@ function bigKeysClick(e){
             console.log(keyItem)
             break
 
+        //send
         case "send":
-            chat.innerHTML += "<div class='message'><p>"+myTxt.innerHTML+"</p></div>"
+            chat.innerHTML += "<div class='message'><p>" + myTxt.innerHTML + "</p></div>"
             myTxt.innerHTML = " "
+            break
+
+        //night/light
+        case "toggleButton":
+            if (styleSheet.getAttribute("href") === "keyboard-light.css") {
+                styleSheet.setAttribute("href", "keyboard-night.css")
+                key.innerHTML = "<p>Light</p>"
+            } else {
+                styleSheet.setAttribute("href", "keyboard-light.css")
+                key.innerHTML = "<p>Night</p>"
+            }
+            break
     }
 }
 
@@ -180,7 +175,7 @@ del.addEventListener('mousedown', function () {
         if (mouseDown) {
             myTxt.innerHTML = ""
         }
-    }, 1200)
+    }, 1000)
 });
 del.addEventListener('mouseup', function () {
     clearTimeout(holding);
@@ -201,3 +196,9 @@ const reset = document.querySelector(".reset button")
 reset.addEventListener("click", () => {
     chat.innerHTML = ""
 })
+
+//audio
+// setVolume = function (val) {
+//     audio1.volume = val / 100
+//     audio2.volume = val / 100
+// }

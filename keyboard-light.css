@@ -1,7 +1,7 @@
 .keyboard, header{
     background-color:#e9dfdf;
 }
-header{
+header, a{
     color: #ff2e63;
 }
 .chat div, #myMess{
