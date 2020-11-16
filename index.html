@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="keyboard.css">
     <link rel="stylesheet" href="keyboard-light.css">
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
@@ -25,93 +26,88 @@
     </header>
 
     <!-- chat -->
-    <section class="chat">
-        <div class="message">
-            <p>blablabla</p>
+    <section class="main">
+        <div class="chat">
+            
         </div>
-        <div class="message">
-            <p>blablabla</p>
+        <div id="myMess">
+            <p id="myTxt"></p>
         </div>
     </section>
 
     <!-- keyboard -->
     <section class="downP">
 
-        <div class="textarea">
-            <textarea readonly></textarea>
-            <button>Send</button>
-        </div>
-
         <div class="keyboard">
 
             <!-- first row -->
             <div class="row first">
-                <div class="key 1"><p>1</p></div>
-                <div class="key 2"><p>2</p></div>
-                <div class="key 3"><p>3</p></div>
-                <div class="key 4"><p>4</p></div>
-                <div class="key 5"><p>5</p></div>
-                <div class="key 6"><p>6</p></div>
-                <div class="key 7"><p>7</p></div>
-                <div class="key 8"><p>8</p></div>
-                <div class="key 9"><p>9</p></div>
-                <div class="key 0"><p>0</p></div>
-                <div class="key )"><p>)</p></div>
-                <div class="key ="><p>=</p></div>
-                <div class="bigKey"><p>Suppr</p></div>
+                <div class="key 1 & spec"><p>1</p></div>
+                <div class="key 2 é spec"><p>2</p></div>
+                <div class="key 3 # spec"><p>3</p></div>
+                <div class="key 4 ' spec"><p>4</p></div>
+                <div class="key 5 ( spec"><p>5</p></div>
+                <div class="key 6 - spec"><p>6</p></div>
+                <div class="key 7 è spec"><p>7</p></div>
+                <div class="key 8 _ spec"><p>8</p></div>
+                <div class="key 9 ç spec"><p>9</p></div>
+                <div class="key 0 à spec"><p>0</p></div>
+                <div class="key ) ° spec"><p>)</p></div>
+                <div class="key = + spec"><p>=</p></div>
+                <div class="bigKey del"><p>Suppr</p></div>
             </div>
 
             <div class="row second">
-                <div class="bigKey toggleButton"><p>Night</p></div>
-                <div class="key a"><p>a</p></div>
-                <div class="key z"><p>z</p></div>
-                <div class="key e"><p>e</p></div>
-                <div class="key r"><p>r</p></div>
-                <div class="key t"><p>t</p></div>
-                <div class="key y"><p>y</p></div>
-                <div class="key u"><p>u</p></div>
-                <div class="key i"><p>i</p></div>
-                <div class="key o"><p>o</p></div>
-                <div class="key p"><p>p</p></div>
-                <div class="key ^"><p>^</p></div>
-                <div class="key $"><p>$</p></div>
-                <div class="fakeButton"></div>
+                <div class="key a A"><p>a</p></div>
+                <div class="key z Z"><p>z</p></div>
+                <div class="key e E"><p>e</p></div>
+                <div class="key r R"><p>r</p></div>
+                <div class="key t T"><p>t</p></div>
+                <div class="key y Y"><p>y</p></div>
+                <div class="key u U"><p>u</p></div>
+                <div class="key i I"><p>i</p></div>
+                <div class="key o O"><p>o</p></div>
+                <div class="key p P"><p>p</p></div>
+                <div class="key ^ ¨ spec"><p>^</p></div>
+                <div class="key $ £ spec"><p>$</p></div>
             </div>
 
             <div class="row third">
-                <div class="bigKey"><p>Caps</p></div>
-                <div class="key q"><p>q</p></div>
-                <div class="key s"><p>s</p></div>
-                <div class="key d"><p>d</p></div>
-                <div class="key f"><p>f</p></div>
-                <div class="key g"><p>g</p></div>
-                <div class="key h"><p>h</p></div>
-                <div class="key j"><p>j</p></div>
-                <div class="key k"><p>k</p></div>
-                <div class="key l"><p>l</p></div>
-                <div class="key m"><p>m</p></div>
-                <div class="key ù"><p>ù</p></div>
-                <div class="key *"><p>*</p></div>
-                <div class="bigKey"><p>Enter</p></div>
+                <div class="bigKey caps"><p>Caps</p><div class="led capsLed"></div></div>
+                <div class="key q Q"><p>q</p></div>
+                <div class="key s S"><p>s</p></div>
+                <div class="key d D"><p>d</p></div>
+                <div class="key f F"><p>f</p></div>
+                <div class="key g G"><p>g</p></div>
+                <div class="key h H"><p>h</p></div>
+                <div class="key j J"><p>j</p></div>
+                <div class="key k K"><p>k</p></div>
+                <div class="key l L"><p>l</p></div>
+                <div class="key m M"><p>m</p></div>
+                <div class="key ù % spec"><p>ù</p></div>
+                <div class="key * µ spec"><p>*</p></div>
+                <div class="bigKey etr"><p>Enter</p></div>
             </div>
 
             <div class="row fourth">
-                <div class="bigKey"><p>Shift</p></div>
-                <div class="key w"><p>w</p></div>
-                <div class="key x"><p>x</p></div>
-                <div class="key c"><p>c</p></div>
-                <div class="key v"><p>v</p></div>
-                <div class="key b"><p>b</p></div>
-                <div class="key n"><p>n</p></div>
-                <div class="key ,"><p>,</p></div>
-                <div class="key ;"><p>;</p></div>
-                <div class="key :"><p>:</p></div>
-                <div class="key !"><p>!</p></div>
-                <div class="bigKey" id="emojis">&#128540;</div>
+                <div class="bigKey shift"><p>Shift</p><div class="led shiftLed"></div></div>
+                <div class="key w W"><p>w</p></div>
+                <div class="key x X"><p>x</p></div>
+                <div class="key c C"><p>c</p></div>
+                <div class="key v V"><p>v</p></div>
+                <div class="key b B"><p>b</p></div>
+                <div class="key n N"><p>n</p></div>
+                <div class="key , ? spec"><p>,</p></div>
+                <div class="key ; . spec"><p>;</p></div>
+                <div class="key : / spec"><p>:</p></div>
+                <div class="key ! § spec"><p>!</p></div>
+                <div class="bigKey emojis">&#128540;</div>
             </div>
 
             <div class="row fifth">
+                <div class="bigKey toggleButton"><p>Night</p></div>
                 <div class="space"><p>Space</p></div>
+                <div class="bigKey send"><p>Send</p></div>
             </div>
 
         </div>

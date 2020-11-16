@@ -1,41 +1,28 @@
-body{
+body, .key, .bigKey, .space{
     background-color:  #212121;
 }
-
 header{
     color: #14ffec;
 }
-
-.reset button{
-    background-color: #14ffec;
-}
-
 .keyboard, header{
     background-color: #323232;
 }
-
-.chat div{
+.chat div, #myMess{
     border: 2px solid #08d9d6;
     color: white;
 }
-
-.textarea{
-    background-color: #14ffec;
-}
-
 .key, .bigKey, .space{
-    background-color: #212121;
     border-color: transparent #ddd #999 transparent;
     color: white;
 }
 .key:hover, .bigKey:hover, .space:hover{
     background-color: black;
 }
-
-.toggleButton{
+.toggleButton, .toggleButton:hover{
     background-color: white;
     color: black;
 }
-.toggleButton:hover{
-    background-color: white;
+.reset button, .send, .send:hover{
+    background-color: #14ffec;
+    color: black;
 }
