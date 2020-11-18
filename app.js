@@ -2,10 +2,17 @@
 //time
 const options = { day: 'numeric', month: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' }
 const timeDisplay = document.querySelector("#time")
+const styleSheet = document.querySelector("#toggleMode")
+
+currentTime = new Date().getHours()
+if(currentTime < 18 && currentTime > 8){
+    styleSheet.setAttribute("href", "keyboard-light.css")
+} else {
+    styleSheet.setAttribute("href", "keyboard-night.css")
+}
 
 setInterval(() => {
     window.time = new Date()
-
     timeDisplay.innerHTML = time.toLocaleDateString("fr-FR", options)
 }, 1000)
 
@@ -59,7 +66,6 @@ let shiftAct = false
 const divP = document.querySelectorAll(".key p")
 const specP = document.querySelectorAll(".spec p")
 const chat = document.querySelector(".chat")
-const styleSheet = document.querySelector("#toggleMode")
 
 const bigKeys = document.querySelectorAll(".bigKey")
 for (i = 0; i < bigKeys.length; i++) {
@@ -96,7 +102,7 @@ function bigKeysClick(e) {
 
         //shift
         case "shift":
-            if (shiftAct === false) {
+            if (shiftAct === false && capsAct === false) {
                 divP.forEach(el => {
                     el.style.textTransform = "capitalize"
                 })
@@ -104,6 +110,11 @@ function bigKeysClick(e) {
                     el.innerHTML = el.parentNode.classList[2]
                     el.style.textTransform = "lowercase"
                 })
+                shiftAct = true
+                shiftLed.style.backgroundColor = "rgb(65, 98, 187)"
+            } else if(shiftAct === false && capsAct === true){
+                capsAct = false
+                capsLed.style.backgroundColor = "transparent"
                 shiftAct = true
                 shiftLed.style.backgroundColor = "rgb(65, 98, 187)"
             } else {
@@ -120,7 +131,7 @@ function bigKeysClick(e) {
 
         //caps
         case "caps":
-            if (capsAct === false) {
+            if (capsAct === false && shiftAct === false) {
                 divP.forEach(el => {
                     el.style.textTransform = "capitalize"
                 })
@@ -128,6 +139,11 @@ function bigKeysClick(e) {
                     el.innerHTML = el.parentNode.classList[2]
                     el.style.textTransform = "lowercase"
                 })
+                capsAct = true
+                capsLed.style.backgroundColor = "rgb(100, 240, 80)"
+            } else if(capsAct === false && shiftAct === true){
+                shiftAct = false
+                shiftLed.style.backgroundColor = "transparent"
                 capsAct = true
                 capsLed.style.backgroundColor = "rgb(100, 240, 80)"
             } else {
@@ -149,18 +165,23 @@ function bigKeysClick(e) {
 
         //send
         case "send":
-            chat.innerHTML += "<div class='message'><p>" + myTxt.innerHTML + "</p></div>"
-            myTxt.innerHTML = " "
+            if(myTxt.innerHTML.length > 0 && myTxt.innerHTML != " "){
+                const locTime = time.toLocaleDateString("fr-FR", options)
+                chat.innerHTML += "<div class='message'><p>" + myTxt.innerHTML + "</p><p id='locTime'>" + locTime + "</p></div>"
+                myTxt.innerHTML = " "
+            } else {
+                alert("Message vide")
+            }
             break
 
         //night/light
         case "toggleButton":
             if (styleSheet.getAttribute("href") === "keyboard-light.css") {
                 styleSheet.setAttribute("href", "keyboard-night.css")
-                key.innerHTML = "<p>Light</p>"
+                document.querySelector(".toggleButton img").src = "./assets/sun.svg"
             } else {
                 styleSheet.setAttribute("href", "keyboard-light.css")
-                key.innerHTML = "<p>Night</p>"
+                document.querySelector(".toggleButton img").src = "./assets/moon.svg"
             }
             break
     }
@@ -173,7 +194,7 @@ del.addEventListener('mousedown', function () {
     mouseDown = true
     holding = setTimeout(function () {
         if (mouseDown) {
-            myTxt.innerHTML = ""
+            myTxt.innerHTML = " "
         }
     }, 1000)
 });
@@ -196,9 +217,3 @@ const reset = document.querySelector(".reset button")
 reset.addEventListener("click", () => {
     chat.innerHTML = ""
 })
-
-//audio
-// setVolume = function (val) {
-//     audio1.volume = val / 100
-//     audio2.volume = val / 100
-// }

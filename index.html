@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="keyboard.css">
-    <link rel="stylesheet" href="keyboard-light.css" id="toggleMode">
+    <link rel="stylesheet" href="" id="toggleMode">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
@@ -18,20 +18,17 @@
     <!-- header -->
     <header>
         <div class="date"><p id="time"></p></div>
-        <!-- <div class="sound">
-            <input id="vol-control" type="range" min="0" max="100" step="1" oninput="setVolume(this.value)"
-                onchange="setVolume(this.value)"></input>
-        </div> -->
         <div class="pfLink"><a target="blank" href="https://portfolio-nolan.web.app/">Mon portfolio</a></div>
         <div class="reset">
-            <button>Reset</button>
+            <button><img src="./assets/reset.svg" alt="backspace"></button>
         </div>
     </header>
 
     <!-- chat -->
     <section class="main">
         <div class="chat">
-            
+
+
         </div>
         <div id="myMess">
             <p id="myTxt"></p>
@@ -57,7 +54,7 @@
                 <div class="key 0 à spec"><p>0</p></div>
                 <div class="key ) ° spec"><p>)</p></div>
                 <div class="key = + spec"><p>=</p></div>
-                <div class="bigKey del"><p>Suppr</p></div>
+                <div class="bigKey del"><img src="./assets/backspace.svg" alt="backspace"></div>
             </div>
 
             <div class="row second">
@@ -76,7 +73,7 @@
             </div>
 
             <div class="row third">
-                <div class="bigKey caps"><p>Caps</p><div class="led capsLed"></div></div>
+                <div class="bigKey caps"><img src="./assets/caps.svg" alt="Caps"><div class="led capsLed"></div></div>
                 <div class="key q Q"><p>q</p></div>
                 <div class="key s S"><p>s</p></div>
                 <div class="key d D"><p>d</p></div>
@@ -89,11 +86,11 @@
                 <div class="key m M"><p>m</p></div>
                 <div class="key ù % spec"><p>ù</p></div>
                 <div class="key * µ spec"><p>*</p></div>
-                <div class="bigKey etr"><p>Enter</p></div>
+                <div class="bigKey etr"><img src="./assets/enter.svg" alt="Enter"></div>
             </div>
 
             <div class="row fourth">
-                <div class="bigKey shift"><p>Shift</p><div class="led shiftLed"></div></div>
+                <div class="bigKey shift"><img src="./assets/shift.svg" alt="Shift"><div class="led shiftLed"></div></div>
                 <div class="key w W"><p>w</p></div>
                 <div class="key x X"><p>x</p></div>
                 <div class="key c C"><p>c</p></div>
@@ -108,9 +105,9 @@
             </div>
 
             <div class="row fifth">
-                <div class="bigKey toggleButton"><p>Night</p></div>
-                <div class="space"><p></p></div>
-                <div class="bigKey send"><p>Send</p></div>
+                <div class="bigKey toggleButton"><img src="./assets/moon.svg" alt="Night/Light mode"></div>
+                <div class="space"><img src="./assets/space.svg" alt="spacebar"></div>
+                <div class="bigKey send"><img src="./assets/send.svg" alt="Send"></div>
             </div>
 
         </div>

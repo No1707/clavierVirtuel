@@ -25,6 +25,7 @@ body{
 
 /* header */
 header{
+    height: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,13 +48,14 @@ header{
     border: none;
     height: 100%;
     width: 100%;
-    font-size: 1.2em;
-    font-weight: bold;
+}
+.reset img{
+    width: 20%;
 }
 
 /* chat */
 .main{
-    overflow: auto;
+    max-height: 65%;
     flex: 2;
     display: flex;  /* a modif si réponses doivent apparaitre a gauche */
     flex-direction: column;
@@ -63,20 +65,26 @@ header{
 }
 
 .chat{
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    width: 50%;
 }
-
 .chat div, #myMess{
+    position: relative;
     border-radius: 10px;
     margin: 0 10px 7px 0;
     padding: 5px;
-    font-size: .7em;
 }
-
 #myMess{
     display: none;
+    margin-top: 5px;
+}
+#locTime{
+    text-align: right;
+    margin-top: 5px;
+    font-size: .7em;
 }
 
 /* downP */
@@ -100,25 +108,40 @@ header{
     margin: 3px 0;
     position: relative;
 }
-p{
-    font-size: 150%;
-}
+/* key */
 .key{
     width: 4em;
 }
+/* bigKey */
 .bigKey{
     width: 7em;
 }
+.bigKey img{
+    width: 20%;
+}
+/* space */
 .space{
     width: 30em;
+}
+.space img{
+    width: 10%;
+}
+.bigKey, .space{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .key, .bigKey, .space{
     margin: 0 3px;
     padding: 5px;
     border-radius: 10px;
 }
-.key p, .bigKey p, .space p{
+.key p, .bigKey img, .space img{
     pointer-events: none;
+}
+.key p{
+    font-size: 1.2em;
+    font-weight: 500;
 }
 .caps, .shift{
     position: relative;
@@ -145,16 +168,6 @@ p{
     margin-left: auto;
     color: black;
 }
-/* fake flex */
-.fakeButton{
-    width: 10em;
-    margin: 0 5px;
-    margin-left: auto;
-}
-
-/*emojis */
-div .emojis{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.send img{
+    width: 25%;
 }
