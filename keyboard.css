@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.key, .bigKey, .space, .textarea button, .reset button{
+.key, .bigKey, .space, .reset button{
     cursor: pointer;
 }
 button:focus, span:focus{
@@ -54,7 +54,7 @@ header{
 .main{
     max-height: 65%;
     flex: 2;
-    display: flex;  /* a modif si réponses doivent apparaitre a gauche */
+    display: flex;  /* a modif si réponses a gauche */
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
