@@ -27,3 +27,6 @@ header, a{
 .reset button, .send, .send:hover{
     background-color: #ff2e63;
 }
+::-webkit-scrollbar-thumb{
+    background: #ff2e63; 
+}

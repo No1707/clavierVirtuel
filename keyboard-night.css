@@ -31,3 +31,6 @@ header, a{
     background-color: #14ffec;
     color: black;
 }
+::-webkit-scrollbar-thumb{
+    background: #14ffec; 
+}

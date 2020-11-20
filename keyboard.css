@@ -9,7 +9,6 @@
 button:focus, span:focus{
     outline: none;
 }
-
 body, .keyboard{
     transition: .5s ease;
 }
@@ -31,26 +30,24 @@ header{
     align-items: center;
     font-family: 'Roboto', sans-serif;
 }
+
 /* date */
 .date{
     margin-left: 2%;
 }
-/*son*/
-
 
 /* reset*/
 .reset{
     width: 10%;
     height: 100%;
 }
-
 .reset button{
     border: none;
     height: 100%;
     width: 100%;
 }
 .reset img{
-    width: 20%;
+    width: 2.5em;
 }
 
 /* chat */
@@ -108,10 +105,12 @@ header{
     margin: 3px 0;
     position: relative;
 }
+
 /* key */
 .key{
     width: 4em;
 }
+
 /* bigKey */
 .bigKey{
     width: 7em;
@@ -119,6 +118,7 @@ header{
 .bigKey img{
     width: 20%;
 }
+
 /* space */
 .space{
     width: 30em;
@@ -170,4 +170,62 @@ header{
 }
 .send img{
     width: 25%;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/* media queries */
+@media screen and (max-width: 767.98px) {
+    /* imgs */
+    .reset img{
+        width: 2em;
+    }
+    /* leds */
+    .led{
+        height: 7px;
+        width: 7px;
+        right: 7px;
+        top: 7px;
+    }
+    /* fonts */
+    .key p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 575.98px){
+    /* imgs */
+    .reset img{
+        width: 1.5em;
+    }
+    .bigKey img{
+        width: .8em;
+    }
+    /* leds */
+    .led{
+        height: 5px;
+        width: 5px;
+        right: 5px;
+        top: 5px;
+    }
+    /* fonts */
+    .key p, #myTxt{
+        font-size: .8em;
+    }
+    #locTime{
+        font-size: .6em;
+    }
 }

@@ -159,9 +159,9 @@ function bigKeysClick(e) {
             break
 
         //emojis
-        case "emojis":
-            console.log(keyItem)
-            break
+        // case "emojis":
+        //     console.log(keyItem)
+        //     break
 
         //send
         case "send":
